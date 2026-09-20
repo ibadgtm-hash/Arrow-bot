@@ -2,10 +2,12 @@ name: Build ArrowBot APK
 
 on:
   workflow_dispatch:
-
   push:
     branches:
       - main
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -38,8 +40,10 @@ jobs:
         run: |
           gradle assembleDebug --stacktrace
 
-      - name: Upload APK
-        uses: actions/upload-artifact@v4
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
         with:
-          name: ArrowBot-debug
-          path: app/build/outputs/apk/debug/app-debug.apk
+          tag_name: arrowbot-v${{ github.run_number }}
+          name: ArrowBot v${{ github.run_number }}
+          files: app/build/outputs/apk/debug/app-debug.apk
+          generate_release_notes: false
