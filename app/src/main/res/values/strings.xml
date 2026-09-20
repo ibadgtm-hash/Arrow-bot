@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <string name="app_name">Arrow Bot</string>
+
+    <string name="accessibility_desc">
+        Arrow Bot automatic touch service
+    </string>
+
+</resources>
