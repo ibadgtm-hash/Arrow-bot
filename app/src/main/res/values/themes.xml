@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <style
+        name="Theme.ArrowBot"
+        parent="Theme.AppCompat.DayNight.NoActionBar">
+
+        <item name="android:fontFamily">sans</item>
+
+        <item name="android:colorAccent">#4F46E5</item>
+
+    </style>
+
+</resources>
